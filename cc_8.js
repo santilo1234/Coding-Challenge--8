@@ -20,3 +20,15 @@ const calculateDiscount= function(price, discountRate) {
 //Test Data
 calculateDiscount(100, 0.2); // Expected output: "Final Price: $80.00"
 calculateDiscount(250, 0.15); // Expected output: "Final Price: $212.50"
+
+
+//Task 3
+const calculateServiceFee = (amount, serviceType) => {
+    let feeRate = ServiceType === "Premium" ? 0.15 : serviceType === "Standard" ? 0.10 : 0.05;
+    let serviceFee = amount * feeRate;
+    
+}
+
+//Test Data
+calculateServiceFee(200, "Premium"); // Expected output: "Service Fee: $30.00"
+calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
