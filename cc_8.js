@@ -25,10 +25,26 @@ calculateDiscount(250, 0.15); // Expected output: "Final Price: $212.50"
 //Task 3
 const calculateServiceFee = (amount, serviceType) => {
     let feeRate = ServiceType === "Premium" ? 0.15 : serviceType === "Standard" ? 0.10 : 0.05;
-    let serviceFee = amount * feeRate;
+    let serviceFee = amount * feeRate; //Service fee calculation
     
 }
 
 //Test Data
 calculateServiceFee(200, "Premium"); // Expected output: "Service Fee: $30.00"
 calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
+
+
+//Task 4
+const calculateRentalCost = (days, carType, insurance = false) => {
+    let dailyRate = carType === "Economy" ? 40 : carType === "Standard"? 60 : 100;
+    let totalCost = days * dailyRate + (insurance ? days * 20 : 0);
+    console.log(`Total Rental Cost: $$(totalCost)`); //Calculates the total rental cost
+
+};
+
+//Test Data
+calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
+calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
+
+
+
