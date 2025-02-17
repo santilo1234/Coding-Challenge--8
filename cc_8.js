@@ -62,3 +62,17 @@ calculateLoanPayment(5000, 0.07, 3); // Expected output: "Total Payment: $6050.0
 
 
 
+//Task 6
+letTransactions = [200, 1500, 3200, 800, 2500];
+const filterLargeTransactions = (transactions, filterFunction) => {
+    console.log (transactions.filter(filterFunction)); //Filters out large transactions
+
+};
+
+//Test Data
+let transactions = [200, 1500, 3200, 800, 2500];
+filterLargeTransactions(transactions, amount => amount > 1000);
+// Expected output: [1500, 3200, 2500]
+
+
+
