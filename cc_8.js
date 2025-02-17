@@ -91,3 +91,18 @@ console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 
 
 
+//Task 8
+const calculateSavings = (years, amount) => {
+    if(years === 10) {
+        console.log(`Projected Savings: $${amount.toFixed(2)}`);
+        return;
+    }
+calculateSavings(years + 1 * 1.05); // Projects savings growth by 5% annually
+
+};
+
+
+//Test Data
+calculateSavings(8, 1000); // Expected output: "Projected Savings: $1102.50"
+calculateSavings(5, 5000); // Expected output: "Projected Savings: $6381.41"
+
